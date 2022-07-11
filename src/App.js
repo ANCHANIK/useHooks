@@ -1,14 +1,16 @@
-import "./styles.css";
-import UseInput from "./Hooks/UseInput";
+import GlobalProvider from "./context/GlobalContext";
+import InputCustom from "./components/InputCustom";
 
-export default function App() {
-  const maxLen = (value) => value.length <= 10;
-  const name = UseInput("ANCHANIK", maxLen);
+const App = () => {
+
 
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <input placeholder="Name" {...name} />
-    </div>
+    <>
+      <GlobalProvider>
+        <InputCustom />
+      </GlobalProvider>
+    </>
   );
 }
+
+export default App;
