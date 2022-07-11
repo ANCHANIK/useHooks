@@ -1,14 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import UseInput from "./Hooks/UseInput";
 
-function App() {
+export default function App() {
+  const maxLen = (value) => value.length <= 10;
+  const name = UseInput("ANCHANIK", maxLen);
 
-  
   return (
-    <>
-      <h1>Hello React</h1>
-    </>
+    <div className="App">
+      <h1>Hello</h1>
+      <input placeholder="Name" {...name} />
+    </div>
   );
 }
-
-export default App;
