@@ -1,6 +1,6 @@
 import { createContext, useMemo, useState } from "react";
 
-const GlobalContext = createContext();
+export const GlobalContext = createContext();
 
 const GlobalProvider = (props) => {
     const [name, setName] = useState('');
